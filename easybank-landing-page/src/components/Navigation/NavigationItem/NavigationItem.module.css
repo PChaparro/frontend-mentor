@@ -1,0 +1,16 @@
+.navbar__option {
+  /* Center vertically: This is needed because of the
+  align-self: stretch of the parent element*/
+  display: flex;
+  align-items: center;
+  color: var(--neutral-grayish-blue);
+  font-size: var(--fs-sm);
+  border-block-end: 3px solid transparent;
+
+  transition: all 0.3s ease;
+}
+
+.navbar__option:hover {
+  color: var(--primary-dark-blue);
+  border-block-end: 3px solid var(--primary-lime-green);
+}
