@@ -16,14 +16,3 @@
   gap: 32px;
   list-style: none;
 }
-
-.navbar__button {
-  padding: 0.8em 2.4em;
-  border: 1px solid transparent;
-  border-radius: 16px;
-  cursor: pointer;
-
-  color: white;
-  font-size: var(--fs-sm);
-  background: linear-gradient(to right, var(--primary-lime-green), var(--primary-bright-cyan));
-}

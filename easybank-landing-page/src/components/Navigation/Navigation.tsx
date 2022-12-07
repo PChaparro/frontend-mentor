@@ -1,5 +1,7 @@
-import Styles from './Navigation.module.css';
+import { GradientButton } from '../GradientButton/GradiendButton';
 import { NavigationItem } from './NavigationItem/NavigationItem';
+
+import Styles from './Navigation.module.css';
 
 const options = [
   { name: 'Home' },
@@ -19,7 +21,7 @@ export const Navigation = () => {
             return <NavigationItem key={`nav-option-${index}`} name={option.name} />;
           })}
         </ul>
-        <button className={Styles.navbar__button}>Request invite</button>
+        <GradientButton text='Request invite' />
       </div>
     </nav>
   );
