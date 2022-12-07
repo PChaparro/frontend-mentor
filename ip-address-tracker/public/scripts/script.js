@@ -5,7 +5,9 @@ const informationIP = document.getElementById('information-ip');
 const informationLocation = document.getElementById('information-location');
 const informationTimezone = document.getElementById('information-timezone');
 const informationISP = document.getElementById('information-isp');
+
 const searchForm = document.getElementById('search-form');
+const searchInput = document.getElementById('ip-or-domain');
 
 // ### ### ### ### ###
 // Map configs
@@ -27,9 +29,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
  * update the UI.
  */
 const geolocateByIp = async (ipToLocate = '') => {
-  const reply = await fetch(`${GEOLOCATION_BASE_URL}&ipAddress=${ipToLocate}`);
-  const data = await reply.json();
-  udpateUI(data);
+  try {
+    const reply = await fetch(`${GEOLOCATION_BASE_URL}&ipAddress=${ipToLocate}`);
+    const data = await reply.json();
+    udpateUI(data);
+  } catch {
+    alert('Unable to find the given IP');
+  }
 };
 
 /**
@@ -38,9 +44,13 @@ const geolocateByIp = async (ipToLocate = '') => {
  * update the UI
  */
 const geolocateByDomain = async (domainToLocate = '') => {
-  const reply = await fetch(`${GEOLOCATION_BASE_URL}&domain=${domainToLocate}`);
-  const data = await reply.json();
-  udpateUI(data);
+  try {
+    const reply = await fetch(`${GEOLOCATION_BASE_URL}&domain=${domainToLocate}`);
+    const data = await reply.json();
+    udpateUI(data);
+  } catch {
+    alert('Unable to find the given domain');
+  }
 };
 
 /**
@@ -67,8 +77,14 @@ const udpateUI = (data) => {
 searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(e.target));
+  const IP_OR_DOMAIN = data['ip-or-domain'];
+  const ip_regexp = new RegExp(
+    /(?:(?:25[0-5]|2[0-4]\d|[01]?\d?\d{1})\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d?\d{1})/g,
+  );
+
+  if (ip_regexp.test(IP_OR_DOMAIN)) geolocateByIp(IP_OR_DOMAIN);
+  else geolocateByDomain(IP_OR_DOMAIN);
 });
 
 // Get user location on load
-// geolocateByIp('');
-// geolocateByDomain('google.com');
+geolocateByIp('');
