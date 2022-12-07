@@ -8,6 +8,41 @@
     <title>Ip address tracker</title>
   </head>
   <body>
-    <h1>Hello world</h1>
+    <header class="header">
+      <h1 class="header__title">IP Address Tracker</h1>
+      <form class="container header__form">
+        <div class="header__form-group">
+          <input
+            class="header__form-input"
+            type="text"
+            name="ip-or-domain"
+            id="ip-or-domain"
+            placeholder="Search for any IP address or domain"
+          />
+          <button class="header__form-button" type="submit">
+            <img src="./public/images/icon-arrow.svg" alt="Search icon" />
+          </button>
+        </div>
+      </form>
+    </header>
+    <article class="container information">
+      <div class="information__column">
+        <h2 class="information__title">IP ADDRESS</h2>
+        <p class="information__text">192.212.174.101</p>
+      </div>
+      <div class="information__column">
+        <h2 class="information__title">LOCATION</h2>
+        <p class="information__text">Brooklyn, NY 10001</p>
+      </div>
+      <div class="information__column">
+        <h2 class="information__title">TIMEZONE</h2>
+        <p class="information__text">UCT - 05:00</p>
+      </div>
+      <div class="information__column">
+        <h2 class="information__title">ISP</h2>
+        <p class="information__text">SpaceX Starlink</p>
+      </div>
+    </article>
+    <div class="map"></div>
   </body>
 </html>

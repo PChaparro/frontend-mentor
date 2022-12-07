@@ -31,6 +31,13 @@
 :root {
   --very-dark-gray: hsl(0, 0%, 17%);
   --dark-gray: hsl(0, 0%, 59%);
+  --dark-blue: #433d97;
+  --soft-blue: #6084f2;
+
+  --fs-sm: 0.8rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.8rem;
+  --fs-xlg: 2rem;
 }
 
 /* Default styles */
@@ -42,4 +49,124 @@
 
 body {
   font-family: 'Rubik';
+}
+
+/* UI */
+.container {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+/* ### ### ### ### ### ### ###*/
+/* Header styles */
+.header {
+  min-height: 30vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+
+  background: linear-gradient(to right, rgb(218, 34, 255, 0.15), rgb(151, 51, 238, 0.15)),
+    url('../images/pattern-bg.png') no-repeat center center / cover;
+  background-position: center center;
+  background-size: cover;
+}
+
+.header__title {
+  color: white;
+  font-size: var(--fs-xlg);
+}
+
+/* Input and button group to put one at the side of the other */
+.header__form-group {
+  width: 50%;
+  margin: 0px auto;
+
+  display: flex;
+  align-items: stretch;
+}
+
+.header__form-button,
+.header__form-input {
+  border: none;
+  outline: none;
+}
+
+.header__form-input {
+  flex: 1;
+  padding: 22px 20px;
+  font-size: var(--fs-md);
+  border-radius: 16px 0px 0px 16px;
+}
+
+.header__form-button {
+  padding: 4px 28px;
+  background-color: var(--very-dark-gray);
+  border-radius: 0px 16px 16px 0px;
+}
+
+/* ### ### ### ### ### ### ###*/
+/* Information styles */
+.information {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  padding: 24px;
+  background-color: white;
+  border-radius: 16px;
+  margin-top: -72px;
+}
+
+.information__column {
+  padding: 8px 16px;
+}
+
+.information__column:not(:last-child) {
+  border-inline-end: 1px solid #d3d3d3;
+}
+
+.information__title {
+  color: var(--dark-gray);
+  font-size: var(--fs-sm);
+  margin-block-end: 12px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+}
+
+.information__text {
+  font-size: var(--fs-lg);
+  font-weight: 500;
+}
+
+.map {
+  min-height: 70vh;
+  background-color: aliceblue;
+}
+
+@media screen and (max-width: 992px) {
+  .header__form-group {
+    width: 100%;
+  }
+
+  .information {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .information__column:not(:last-child) {
+    border-inline-end: none;
+  }
+
+  .information__column {
+    text-align: center;
+  }
 }
