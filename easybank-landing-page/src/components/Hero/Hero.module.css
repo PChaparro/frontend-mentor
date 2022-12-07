@@ -1,5 +1,32 @@
+.background {
+  background-color: var(--very-light-gray);
+}
+
 .hero {
   width: 100%;
   height: calc(100vh - 80px);
-  background-color: var(--very-light-gray);
+
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  padding: 16px;
+}
+
+.hero__texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.hero__title {
+  color: var(--primary-dark-blue);
+  font-weight: 400;
+  font-size: var(--fs-xlg);
+}
+
+.hero__paragraph {
+  color: var(--neutral-grayish-blue);
+  font-size: var(--fs-md);
+  line-height: 2rem;
 }

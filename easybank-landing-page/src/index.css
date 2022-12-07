@@ -43,6 +43,8 @@
   --very-light-gray: hsl(0, 0%, 98%);
 
   --fs-sm: 1rem;
+  --fs-md: 1.4rem;
+  --fs-xlg: 3.6rem;
 }
 
 body {
