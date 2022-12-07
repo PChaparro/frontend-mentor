@@ -15,6 +15,13 @@ const searchInput = document.getElementById('ip-or-domain');
 const mapContainer = document.getElementById('map');
 const map = L.map(mapContainer).setView([0, 0], 8);
 
+const MARKER_ICON = L.icon({
+  iconUrl: './public/images/icon-location.svg',
+  iconSize: [50, 60],
+});
+
+let marker;
+
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -64,6 +71,14 @@ const udpateUI = (data) => {
 
   // Change map location
   map.flyTo([location.lat, location.lng], 8);
+
+  if (!marker) {
+    // Create the marker the first time
+    marker = L.marker([location.lat, location.lng], { icon: MARKER_ICON }).addTo(map);
+  } else {
+    // Move the marker to the new point
+    marker.setLatLng([location.lat, location.lng]);
+  }
 
   // Change card information
   informationIP.textContent = ip;
