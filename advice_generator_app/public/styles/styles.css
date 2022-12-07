@@ -95,4 +95,10 @@ body {
   aspect-ratio: 1/1;
   cursor: pointer;
   background-color: var(--primary-neon-green);
+
+  transition: box-shadow 0.2s ease-out;
+}
+
+.quote__dice:hover {
+  box-shadow: 0px 0px 32px var(--primary-neon-green);
 }
