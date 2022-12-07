@@ -1,5 +1,6 @@
 const quoteNumber = document.getElementById('quote-number');
 const quoteText = document.getElementById('quote-text');
+const quoteDice = document.getElementById('quote-dice');
 
 /**
  * @param {Number} it Iteration counter to try again no more than 3 times
@@ -35,4 +36,9 @@ const updateQuoteUI = async () => {
   }
 };
 
+quoteDice.addEventListener('click', () => {
+  updateQuoteUI();
+});
+
+// Get random quote on load
 updateQuoteUI();
