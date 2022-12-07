@@ -13,7 +13,9 @@ const searchInput = document.getElementById('ip-or-domain');
 // Map configs
 
 const mapContainer = document.getElementById('map');
-const map = L.map(mapContainer).setView([0, 0], 8);
+const map = L.map(mapContainer, {
+  zoomControl: false,
+}).setView([0, 0], 8);
 
 const MARKER_ICON = L.icon({
   iconUrl: './public/images/icon-location.svg',
