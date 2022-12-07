@@ -1,0 +1,48 @@
+/* public-sans-300 - latin */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/public-sans-v14-latin-300.woff2') format('woff2'),
+    url('../fonts/public-sans-v14-latin-300.woff') format('woff'),
+    url('../fonts/public-sans-v14-latin-300.ttf') format('truetype');
+}
+
+/* public-sans-regular - latin */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/public-sans-v14-latin-regular.woff2') format('woff2'),
+    url('../fonts/public-sans-v14-latin-regular.woff') format('woff'),
+    url('../fonts/public-sans-v14-latin-regular.ttf') format('truetype');
+}
+
+/* public-sans-700 - latin */
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/public-sans-v14-latin-700.woff2') format('woff2'),
+    url('../fonts/public-sans-v14-latin-700.woff') format('woff'),
+    url('../fonts/public-sans-v14-latin-700.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --primary-dark-blue: hsl(233, 26%, 24%);
+  --primary-lime-green: hsl(136, 65%, 51%);
+  --primary-bright-cyan: hsl(192, 70%, 51%);
+  --neutral-grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-family: 'Public Sans', 'Sans serif';
+}
