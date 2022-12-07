@@ -114,6 +114,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1000;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -3,14 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/styles/styles.css" />
+    <!--Map library-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
     <title>Ip address tracker</title>
   </head>
   <body>
     <header class="header">
       <h1 class="header__title">IP Address Tracker</h1>
-      <form class="container header__form">
+      <form class="container header__form" id="search-form">
         <div class="header__form-group">
           <input
             class="header__form-input"
@@ -28,21 +41,22 @@
     <article class="container information">
       <div class="information__column">
         <h2 class="information__title">IP ADDRESS</h2>
-        <p class="information__text">192.212.174.101</p>
+        <p class="information__text" id="information-ip">192.212.174.101</p>
       </div>
       <div class="information__column">
         <h2 class="information__title">LOCATION</h2>
-        <p class="information__text">Brooklyn, NY 10001</p>
+        <p class="information__text" id="information-location">Brooklyn, NY 10001</p>
       </div>
       <div class="information__column">
         <h2 class="information__title">TIMEZONE</h2>
-        <p class="information__text">UCT - 05:00</p>
+        <p class="information__text" id="information-timezone">UCT - 05:00</p>
       </div>
       <div class="information__column">
         <h2 class="information__title">ISP</h2>
-        <p class="information__text">SpaceX Starlink</p>
+        <p class="information__text" id="information-isp">SpaceX Starlink</p>
       </div>
     </article>
-    <div class="map"></div>
+    <div class="map" id="map"></div>
+    <script src="./public/scripts/script.js"></script>
   </body>
 </html>
