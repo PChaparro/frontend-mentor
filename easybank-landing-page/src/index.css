@@ -39,16 +39,18 @@
   --primary-lime-green: hsl(136, 65%, 51%);
   --primary-bright-cyan: hsl(192, 70%, 51%);
   --neutral-grayish-blue: hsl(233, 8%, 62%);
-  --light-grayish-blue: hsl(220, 16%, 96%);
+  --light-grayish-blue: hsl(220, 14%, 96%);
   --very-light-gray: hsl(0, 0%, 98%);
 
   --fs-sm: 1rem;
   --fs-md: 1.4rem;
+  --fs-lg: 2.6rem;
   --fs-xlg: 3.6rem;
 }
 
 body {
   font-family: 'Public Sans', 'Sans serif';
+  overflow-x: hidden; /* To hide the hero images overflow */
 }
 
 .container {
@@ -59,8 +61,8 @@ body {
 
 @media screen and (max-width: 768px) {
   :root {
-    --fs-sm: 1rem;
     --fs-md: 1.2rem;
+    --fs-lg: 2.4rem;
     --fs-xlg: 3.2rem;
   }
 }

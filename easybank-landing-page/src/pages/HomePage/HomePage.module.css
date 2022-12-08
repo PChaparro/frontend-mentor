@@ -1,3 +1,27 @@
-.space-placeholder {
-  height: 100vh;
+.section {
+  min-height: 80vh;
+  padding: 32px 16px;
+}
+
+.section--dark {
+  background-color: var(--light-grayish-blue);
+}
+
+.section__title {
+  color: var(--primary-dark-blue);
+  font-size: var(--fs-lg);
+  font-weight: 400;
+}
+
+.section__paragraph {
+  color: var(--neutral-grayish-blue);
+  font-size: var(--fs-md);
+  font-weight: 300;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-block: 16px;
 }
