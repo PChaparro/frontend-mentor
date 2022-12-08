@@ -64,6 +64,7 @@ body {
   :root {
     --fs-md: 1.2rem;
     --fs-xl: 2.4rem;
+    --fs-lg: 1.6rem;
     --fs-2xl: 3.2rem;
   }
 }

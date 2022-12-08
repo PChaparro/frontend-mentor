@@ -30,3 +30,9 @@
   gap: 32px;
   margin-block: 64px;
 }
+
+@media screen and (max-width: 768px) {
+  .section {
+    text-align: center;
+  }
+}
