@@ -37,7 +37,10 @@ export const Navigation = () => {
           aria-label='Toggle menu visibility'
           onClick={HandleNavigationToggle}
         >
-          <img src='/icons/icon-hamburger.svg' alt='' />
+          <img
+            src='/frontend-mentor/easybank-landing-page/icons/icon-hamburger.svg'
+            alt='Toggle menu visibility'
+          />
         </button>
       </div>
     </nav>
