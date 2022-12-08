@@ -1,12 +1,7 @@
+import { IReason } from '../../interfaces/interfaces';
 import Styles from './ReasonsCard.module.css';
 
-interface Props {
-  icon: string;
-  title: string;
-  description: string;
-}
-
-export const ReasonsCard = ({ icon, title, description }: Props) => {
+export const ReasonsCard = ({ icon, title, description }: IReason) => {
   return (
     <article className={Styles.card}>
       <img className={Styles.card__icon} src={icon} alt='' />

@@ -42,6 +42,7 @@
   --light-grayish-blue: hsl(220, 14%, 96%);
   --very-light-gray: hsl(0, 0%, 98%);
 
+  --fs-xsm: 0.8rem;
   --fs-sm: 1rem;
   --fs-md: 1.4rem;
   --fs-lg: 1.8rem;

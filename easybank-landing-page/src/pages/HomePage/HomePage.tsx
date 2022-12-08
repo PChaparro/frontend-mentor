@@ -2,7 +2,9 @@ import { Hero } from '../../components/Hero/Hero';
 
 import Styles from './HomePage.module.css';
 import REASONS from './data/reasons.data.json';
+import ARTICLES from './data/articles.data.json';
 import { ReasonsCard } from '../../components/ReasonsCard/ReasonsCard';
+import { ArticleCard } from '../../components/ArticleCard/ArticleCard';
 
 export const HomePage = () => {
   return (
@@ -23,6 +25,24 @@ export const HomePage = () => {
                   icon={reason.icon}
                   title={reason.title}
                   description={reason.description}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <section className={Styles.section}>
+        <div className='container'>
+          <h2 className={Styles.section__title}>Latest Articles</h2>
+          <div className={Styles['grid-container']}>
+            {ARTICLES.map((article, index) => {
+              return (
+                <ArticleCard
+                  key={`article-card-${index}`}
+                  image={article.image}
+                  author={article.author}
+                  title={article.title}
+                  brief={article.brief}
                 />
               );
             })}

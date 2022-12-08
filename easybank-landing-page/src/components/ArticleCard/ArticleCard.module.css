@@ -1,0 +1,36 @@
+.card {
+  background-color: white;
+}
+
+.card__body {
+  display: grid;
+  gap: 12px;
+  padding: 28px 24px;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.card__author,
+.card__brief {
+  color: var(--neutral-grayish-blue);
+  font-weight: 400;
+}
+
+.card__author {
+  font-size: var(--fs-xsm);
+}
+
+.card__title {
+  color: var(--primary-dark-blue);
+  font-size: var(--fs-md);
+  font-weight: 400;
+}
+
+.card__brief {
+  text-align: justify;
+  font-size: var(--fs-sm);
+}
