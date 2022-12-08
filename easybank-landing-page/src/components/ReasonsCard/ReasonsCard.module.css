@@ -1,0 +1,18 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.card__title {
+  color: var(--primary-dark-blue);
+  font-weight: 400;
+  font-size: var(--fs-lg);
+}
+
+.card__description {
+  color: var(--neutral-grayish-blue);
+  font-size: var(--fs-md);
+  line-height: 1.8rem;
+}

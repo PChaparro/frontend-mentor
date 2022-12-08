@@ -5,7 +5,7 @@
   --primary-light-cyan: hsl(193, 38%, 86%);
   --primary-neon-green: hsl(150, 100%, 66%);
 
-  --fs-lg: 2.2rem;
+  --fs-xl: 2.2rem;
 }
 
 /* Fonts */
@@ -71,7 +71,7 @@ body {
 
 .quote__text {
   margin-block: 32px;
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
   color: var(--primary-light-cyan);
 }
 

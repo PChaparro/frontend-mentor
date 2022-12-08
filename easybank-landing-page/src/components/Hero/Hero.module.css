@@ -22,7 +22,7 @@
 .hero__title {
   color: var(--primary-dark-blue);
   font-weight: 400;
-  font-size: var(--fs-xlg);
+  font-size: var(--fs-2xl);
 }
 
 .hero__paragraph {

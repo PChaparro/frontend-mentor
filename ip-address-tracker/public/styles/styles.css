@@ -36,8 +36,8 @@
 
   --fs-sm: 0.8rem;
   --fs-md: 1rem;
-  --fs-lg: 1.8rem;
-  --fs-xlg: 2rem;
+  --fs-xl: 1.8rem;
+  --fs-2xl: 2rem;
 }
 
 /* Default styles */
@@ -77,7 +77,7 @@ body {
 
 .header__title {
   color: white;
-  font-size: var(--fs-xlg);
+  font-size: var(--fs-2xl);
 }
 
 /* Input and button group to put one at the side of the other */
@@ -144,7 +144,7 @@ body {
 }
 
 .information__text {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
   font-weight: 500;
 }
 

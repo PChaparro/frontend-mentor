@@ -1,5 +1,9 @@
 .section {
-  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 70vh;
   padding: 32px 16px;
 }
 
@@ -9,8 +13,9 @@
 
 .section__title {
   color: var(--primary-dark-blue);
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
   font-weight: 400;
+  margin-block-end: 16px;
 }
 
 .section__paragraph {
@@ -22,6 +27,6 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-  margin-block: 16px;
+  gap: 32px;
+  margin-block: 64px;
 }
