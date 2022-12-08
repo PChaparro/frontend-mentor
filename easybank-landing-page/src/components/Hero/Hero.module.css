@@ -4,7 +4,7 @@
 
 .hero {
   width: 100%;
-  height: calc(80vh);
+  height: 80vh;
 
   display: grid;
   grid-template-columns: 0.8fr 1fr;
@@ -56,4 +56,37 @@
   position: absolute;
   width: 100vw;
   height: 115%;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px;
+    height: 80vh;
+  }
+
+  .hero__images {
+    order: 1;
+  }
+
+  .hero__texts {
+    order: 2;
+
+    text-align: center;
+    align-items: center;
+    padding-block-end: 32px;
+  }
+
+  .hero__images::after,
+  .hero__images::before {
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    left: -16px;
+  }
+
+  .hero__images::before {
+    background-image: url('/images/bg-intro-mobile.svg');
+  }
 }
