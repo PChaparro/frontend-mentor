@@ -6,22 +6,40 @@ export const Footer = () => {
     <footer className={Styles['footer-background']}>
       <div className={`${Styles.footer} container`}>
         <div className={`${Styles.footer__column} ${Styles['footer__column-spaced']}`}>
-          <img src='/images/logo-white.svg' alt='Easybank logo' />
+          <img
+            src='/frontend-mentor/easybank-landing-page/images/logo-white.svg'
+            alt='Easybank logo'
+          />
           <div className={Styles.footer__socials}>
             <a href='#' target='_blank' rel='noopener noreferrer'>
-              <img src='/icons/icon-facebook.svg' alt='Find Easybank on facebook' />
+              <img
+                src='/frontend-mentor/easybank-landing-page/icons/icon-facebook.svg'
+                alt='Find Easybank on facebook'
+              />
             </a>
             <a href='#' target='_blank' rel='noopener noreferrer'>
-              <img src='/icons/icon-youtube.svg' alt='Find Easybank on youtube' />
+              <img
+                src='/frontend-mentor/easybank-landing-page/icons/icon-youtube.svg'
+                alt='Find Easybank on youtube'
+              />
             </a>
             <a href='#' target='_blank' rel='noopener noreferrer'>
-              <img src='/icons/icon-twitter.svg' alt='Find Easybank on twitter' />
+              <img
+                src='/frontend-mentor/easybank-landing-page/icons/icon-twitter.svg'
+                alt='Find Easybank on twitter'
+              />
             </a>
             <a href='#' target='_blank' rel='noopener noreferrer'>
-              <img src='/icons/icon-pinterest.svg' alt='Find Easybank on pinterest' />
+              <img
+                src='/frontend-mentor/easybank-landing-page/icons/icon-pinterest.svg'
+                alt='Find Easybank on pinterest'
+              />
             </a>
             <a href='#' target='_blank' rel='noopener noreferrer'>
-              <img src='/icons/icon-instagram.svg' alt='Find Easybank on intagram' />
+              <img
+                src='/frontend-mentor/easybank-landing-page/icons/icon-instagram.svg'
+                alt='Find Easybank on intagram'
+              />
             </a>
           </div>
         </div>
