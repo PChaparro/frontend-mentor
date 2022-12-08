@@ -10,6 +10,11 @@
   transition: all 0.3s ease;
 }
 
+.navbar__option .navbar__link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .navbar__option:hover {
   color: var(--primary-dark-blue);
   border-block-end: 3px solid var(--primary-lime-green);
