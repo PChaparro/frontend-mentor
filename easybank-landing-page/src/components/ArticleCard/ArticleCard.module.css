@@ -28,6 +28,13 @@
   color: var(--primary-dark-blue);
   font-size: var(--fs-md);
   font-weight: 400;
+
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.card__title:hover {
+  color: var(--primary-lime-green);
 }
 
 .card__brief {

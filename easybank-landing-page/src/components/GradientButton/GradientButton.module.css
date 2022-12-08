@@ -7,4 +7,10 @@
   color: white;
   font-size: var(--fs-sm);
   background: linear-gradient(to right, var(--primary-lime-green), var(--primary-bright-cyan));
+  transition: filter 0.3s ease;
+}
+
+.gradient-button:hover,
+.gradient-button:focus {
+  filter: brightness(1.15);
 }
