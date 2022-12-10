@@ -1,0 +1,38 @@
+/* league-spartan-500 - latin */
+@font-face {
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/league-spartan-v6-latin-500.woff2') format('woff2'),
+    url('../fonts/league-spartan-v6-latin-500.woff') format('woff'),
+    url('../fonts/league-spartan-v6-latin-500.ttf') format('truetype');
+}
+
+/* league-spartan-700 - latin */
+@font-face {
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/league-spartan-v6-latin-700.woff2') format('woff2'),
+    url('../fonts/league-spartan-v6-latin-700.woff') format('woff'),
+    url('../fonts/league-spartan-v6-latin-700.ttf') format('truetype');
+}
+
+:root {
+  --desatured-dark-cyan: hsl(180, 29%, 50%);
+
+  --bg-light-grayish-cyan: hsl(180, 52%, 96%);
+  --item-light-grayish-cyan: hsl(180, 31%, 95%);
+  --dark-grayish-cyan: hsl(180, 8%, 52%);
+  --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+}
