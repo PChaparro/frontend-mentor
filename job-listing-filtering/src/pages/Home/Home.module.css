@@ -1,0 +1,15 @@
+.header {
+  height: 15vh;
+  background-image: url('/images/bg-header-desktop.svg');
+  background-color: var(--desatured-dark-cyan);
+  background-position: center center;
+  background-size: cover;
+}
+
+.jobs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 85vw;
+  margin: 48px auto;
+}

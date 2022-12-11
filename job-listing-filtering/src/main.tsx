@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
+import { Home } from './pages/Home/Home';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <p>Hello world</p>
+    <Home />
   </React.StrictMode>,
 );

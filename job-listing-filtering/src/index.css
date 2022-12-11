@@ -20,11 +20,14 @@
 
 :root {
   --desatured-dark-cyan: hsl(180, 29%, 50%);
-
   --bg-light-grayish-cyan: hsl(180, 52%, 96%);
   --item-light-grayish-cyan: hsl(180, 31%, 95%);
   --dark-grayish-cyan: hsl(180, 8%, 52%);
   --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+  --fs-xsm: 0.8rem;
+  --fs-sm: 1rem;
+  --fs-md: 1.3rem;
 }
 
 * {
@@ -35,4 +38,5 @@
 
 body {
   font-family: 'League Spartan', sans-serif;
+  background-color: var(--bg-light-grayish-cyan);
 }
