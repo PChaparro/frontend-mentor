@@ -4,6 +4,7 @@
   gap: 16px;
 
   width: 85vw;
+  max-width: 1000px;
   margin: -32px auto;
   margin-block-end: 32px;
   padding: 16px 32px;
