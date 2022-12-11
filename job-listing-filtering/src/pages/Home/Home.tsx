@@ -16,6 +16,10 @@ export const Home = () => {
     }
   };
 
+  const clearFilters = () => {
+    setFilters([]);
+  };
+
   // Filter the jobs if there are at least one active filter
   const filteredJobs =
     filters.length !== 0
@@ -31,7 +35,7 @@ export const Home = () => {
   return (
     <>
       <div className={Styles.header}></div>
-      {filters.length > 0 && <JobFilter filters={filters} />}
+      {filters.length > 0 && <JobFilter filters={filters} clearFiltersCallback={clearFilters} />}
       <main className={Styles.jobs}>
         {filteredJobs.map((job, index) => (
           <JobCard key={`job-card-${index}`} job={job} toggleFilterCallback={toggleFilter} />
