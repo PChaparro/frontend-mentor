@@ -31,6 +31,7 @@
 
 .job__advertiser {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 12px;
 }
@@ -71,6 +72,7 @@
 
 .job__details {
   display: flex;
+  flex-wrap: wrap;
   color: #a3a3a3;
   font-weight: 700;
 }
@@ -137,5 +139,15 @@
 
   .job__tags {
     justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .job__details {
+    gap: 16px;
+  }
+
+  .job__detail:not(:last-child)::after {
+    display: none;
   }
 }
