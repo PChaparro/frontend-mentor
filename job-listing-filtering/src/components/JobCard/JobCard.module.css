@@ -60,6 +60,13 @@
 .job__position {
   font-weight: bold;
   font-size: var(--fs-md);
+
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.job__position:hover {
+  color: var(--desatured-dark-cyan);
 }
 
 .job__details {
@@ -91,9 +98,19 @@
 .job__tag {
   background-color: var(--item-light-grayish-cyan);
   color: var(--desatured-dark-cyan);
+  border-radius: 4px;
   font-size: var(--fs-sm);
   font-weight: bold;
   padding: 8px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.job__tag:hover,
+.job__tag:focus {
+  color: white;
+  background-color: var(--desatured-dark-cyan);
 }
 
 @media screen and (max-width: 768px) {
