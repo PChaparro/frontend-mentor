@@ -38,6 +38,7 @@ export const JobCard = ({ job, toggleFilterCallback }: Props) => {
       <div className={Styles.job__tags}>
         {[job.role, job.level, ...job.languages, ...job.tools].map((tag, index) => (
           <span
+            tabIndex={0}
             key={`job-tag-${index}`}
             className={Styles.job__tag}
             onClick={() => {

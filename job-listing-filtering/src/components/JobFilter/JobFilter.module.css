@@ -51,7 +51,8 @@
   transition: background-color 0.3s ease;
 }
 
-.filter__item button:hover {
+.filter__item button:hover,
+.filter__item button:focus {
   background-color: var(--very-dark-grayish-cyan);
 }
 
