@@ -1,7 +1,8 @@
 /* Card */
 .job {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto 1fr;
   background-color: white;
   border-radius: 4px;
   padding: 24px 32px;
@@ -81,6 +82,7 @@
 
 .job__tags {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   gap: 12px;
@@ -92,4 +94,31 @@
   font-size: var(--fs-sm);
   font-weight: bold;
   padding: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .job {
+    grid-template-columns: 1fr;
+    padding-block-start: 36px;
+  }
+
+  .job__logo {
+    position: absolute;
+    width: 70px;
+    top: -32px;
+  }
+
+  .job__information {
+    width: 100%;
+    border-block-end: 1px solid #c3c3c3;
+  }
+
+  .job__information,
+  .job__tags {
+    padding-block: 16px;
+  }
+
+  .job__tags {
+    justify-content: flex-start;
+  }
 }

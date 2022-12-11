@@ -13,3 +13,13 @@
   width: 85vw;
   margin: 48px auto;
 }
+
+@media screen and (max-width: 768px) {
+  .header {
+    background-image: url('/images/bg-header-mobile.svg');
+  }
+
+  .jobs {
+    gap: 60px;
+  }
+}
