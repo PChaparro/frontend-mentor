@@ -5,9 +5,10 @@ import Styles from './JobCard.module.css';
 
 interface Props {
   job: IJob;
+  toggleFilterCallback: Function;
 }
 
-export const JobCard = ({ job }: Props) => {
+export const JobCard = ({ job, toggleFilterCallback }: Props) => {
   return (
     <article className={`${Styles.job} ${job.featured && Styles['job--featured']}`}>
       <div className={Styles.job__content}>
@@ -36,7 +37,13 @@ export const JobCard = ({ job }: Props) => {
       </div>
       <div className={Styles.job__tags}>
         {[job.role, job.level, ...job.languages, ...job.tools].map((tag, index) => (
-          <span key={`job-tag-${index}`} className={Styles.job__tag}>
+          <span
+            key={`job-tag-${index}`}
+            className={Styles.job__tag}
+            onClick={() => {
+              toggleFilterCallback(tag);
+            }}
+          >
             {tag}
           </span>
         ))}

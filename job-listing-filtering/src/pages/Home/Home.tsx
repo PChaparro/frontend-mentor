@@ -6,7 +6,15 @@ import JOBS from '../../data/data.json';
 import Styles from './Home.module.css';
 
 export const Home = () => {
-  const [filters, setFilters] = useState<Array<string>>(['Frontend']);
+  const [filters, setFilters] = useState<Array<string>>([]);
+
+  const toggleFilter = (filter: string) => {
+    if (filters.includes(filter)) {
+      setFilters(filters.filter((entry) => entry !== filter));
+    } else {
+      setFilters([...filters, filter]);
+    }
+  };
 
   // Filter the jobs if there are at least one active filter
   const filteredJobs =
@@ -15,20 +23,18 @@ export const Home = () => {
           (job) =>
             job.languages.some((lang) => filters.includes(lang)) ||
             job.tools.some((tool) => filters.includes(tool)) ||
-            filters.includes(job.level) ||
+            filters.includes(job.role) ||
             filters.includes(job.level),
         )
       : JOBS;
 
-  console.log(filteredJobs);
-
   return (
     <>
       <div className={Styles.header}></div>
-      <JobFilter filters={filters} />
+      {filters.length > 0 && <JobFilter filters={filters} />}
       <main className={Styles.jobs}>
-        {JOBS.map((job, index) => (
-          <JobCard key={`job-card-${index}`} job={job} />
+        {filteredJobs.map((job, index) => (
+          <JobCard key={`job-card-${index}`} job={job} toggleFilterCallback={toggleFilter} />
         ))}
       </main>
     </>
