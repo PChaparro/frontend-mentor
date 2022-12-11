@@ -25,12 +25,14 @@ export const Home = () => {
     filters.length !== 0
       ? JOBS.filter(
           (job) =>
-            (job.languages.every((lang) => filters.includes(lang)) &&
-              job.tools.every((tool) => filters.includes(tool))) ||
+            job.languages.some((lang) => filters.includes(lang)) ||
+            job.tools.some((tool) => filters.includes(tool)) ||
             filters.includes(job.role) ||
             filters.includes(job.level),
         )
       : JOBS;
+
+  console.log(filteredJobs);
 
   return (
     <>
